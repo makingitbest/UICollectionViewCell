@@ -47,9 +47,11 @@
     self.dataArray.count % self.horizonCellCount == 0 ? (count = self.dataArray.count / self.horizonCellCount) : (count = self.dataArray.count / self.horizonCellCount + 1) ;
     CGFloat collectionHeight = count * self.cellHeight + (count - 1) * self.verticalGap + self.contentEdegeInsets.top + self.contentEdegeInsets.bottom;
     
-    // 改变collectionView 的frame  ,也改变view自己的值
+    // 改变collectionView的frame  ,没什么作用
     self.collectionView.frame = CGRectMake(0, 0, self.bounds.size.width, collectionHeight);
-    self.frame                = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, collectionHeight);
+    
+   // 改变view的坐标, 移动collectionView的位置
+    self.frame                = CGRectMake(self.bounds.origin.x, 64, self.bounds.size.width, collectionHeight);
     
     self.collectionView.layer.borderWidth = 2;
     self.collectionView.backgroundColor   = [UIColor redColor];

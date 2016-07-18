@@ -73,6 +73,7 @@ typedef enum : NSUInteger {
                     self.backView.backgroundColor = [UIColor whiteColor];
             
             }];
+            
         } else {
             
             self.backView.backgroundColor = [UIColor whiteColor];
