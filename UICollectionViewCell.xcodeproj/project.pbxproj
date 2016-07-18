@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40717A971D3CAC6400F11041 /* SelectedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40717A961D3CAC6400F11041 /* SelectedModel.m */; };
 		40A7C9821D3BC1D90076325D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7C9811D3BC1D90076325D /* main.m */; };
 		40A7C9851D3BC1D90076325D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7C9841D3BC1D90076325D /* AppDelegate.m */; };
 		40A7C9881D3BC1D90076325D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7C9871D3BC1D90076325D /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40717A951D3CAC6400F11041 /* SelectedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedModel.h; sourceTree = "<group>"; };
+		40717A961D3CAC6400F11041 /* SelectedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedModel.m; sourceTree = "<group>"; };
 		40A7C97D1D3BC1D90076325D /* UICollectionViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A7C9811D3BC1D90076325D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40A7C9831D3BC1D90076325D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40717A941D3CAC2400F11041 /* CollectionViewReleated */ = {
+			isa = PBXGroup;
+			children = (
+				40A7C9971D3BC2040076325D /* CollectionGridView.h */,
+				40A7C9981D3BC2040076325D /* CollectionGridView.m */,
+				40A7C99A1D3BCB4D0076325D /* CustomCollectionViewCell.h */,
+				40A7C99B1D3BCB4D0076325D /* CustomCollectionViewCell.m */,
+				40A7C99D1D3BCD060076325D /* CollectionCellClassType.h */,
+				40A7C99E1D3BCD060076325D /* CollectionCellClassType.m */,
+			);
+			name = CollectionViewReleated;
+			sourceTree = "<group>";
+		};
 		40A7C9741D3BC1D90076325D = {
 			isa = PBXGroup;
 			children = (
@@ -76,12 +92,9 @@
 				40A7C9871D3BC1D90076325D /* ViewController.m */,
 				40A7C9A01D3BCF2C0076325D /* TestCell.h */,
 				40A7C9A11D3BCF2C0076325D /* TestCell.m */,
-				40A7C9971D3BC2040076325D /* CollectionGridView.h */,
-				40A7C9981D3BC2040076325D /* CollectionGridView.m */,
-				40A7C99A1D3BCB4D0076325D /* CustomCollectionViewCell.h */,
-				40A7C99B1D3BCB4D0076325D /* CustomCollectionViewCell.m */,
-				40A7C99D1D3BCD060076325D /* CollectionCellClassType.h */,
-				40A7C99E1D3BCD060076325D /* CollectionCellClassType.m */,
+				40717A951D3CAC6400F11041 /* SelectedModel.h */,
+				40717A961D3CAC6400F11041 /* SelectedModel.m */,
+				40717A941D3CAC2400F11041 /* CollectionViewReleated */,
 				40A7C9891D3BC1D90076325D /* Main.storyboard */,
 				40A7C98C1D3BC1D90076325D /* Assets.xcassets */,
 				40A7C98E1D3BC1D90076325D /* LaunchScreen.storyboard */,
@@ -174,6 +187,7 @@
 				40A7C9881D3BC1D90076325D /* ViewController.m in Sources */,
 				40A7C9A21D3BCF2C0076325D /* TestCell.m in Sources */,
 				40A7C99F1D3BCD060076325D /* CollectionCellClassType.m in Sources */,
+				40717A971D3CAC6400F11041 /* SelectedModel.m in Sources */,
 				40A7C9851D3BC1D90076325D /* AppDelegate.m in Sources */,
 				40A7C9821D3BC1D90076325D /* main.m in Sources */,
 				40A7C99C1D3BCB4D0076325D /* CustomCollectionViewCell.m in Sources */,
@@ -327,6 +341,7 @@
 				40A7C9961D3BC1D90076325D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

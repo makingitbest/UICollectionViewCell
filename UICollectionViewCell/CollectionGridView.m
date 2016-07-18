@@ -48,11 +48,11 @@
     CGFloat collectionHeight = count * self.cellHeight + (count - 1) * self.verticalGap + self.contentEdegeInsets.top + self.contentEdegeInsets.bottom;
     
     // 改变collectionView 的frame  ,也改变view自己的值
-    self.collectionView.frame = CGRectMake(0, 60, self.bounds.size.width, collectionHeight);
+    self.collectionView.frame = CGRectMake(0, 0, self.bounds.size.width, collectionHeight);
     self.frame                = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, collectionHeight);
     
     self.collectionView.layer.borderWidth = 2;
-    self.collectionView.backgroundColor   = [UIColor whiteColor];
+    self.collectionView.backgroundColor   = [UIColor redColor];
     
     // 注册cell
     [self.collectionView registerClass:self.registCell.className  forCellWithReuseIdentifier:self.registCell.reuseIndentifier];
@@ -81,10 +81,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    CustomCollectionViewCell *cell = (id)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    [cell selectEvent];
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(collectionGridView:didSelectedCell:)]) {
         
-        return [self.delegate collectionGridView:self didSelectedCell:(id)[collectionView cellForItemAtIndexPath:indexPath]];
+        return [self.delegate collectionGridView:self didSelectedCell:cell];
     }
 }
 

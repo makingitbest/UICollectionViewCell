@@ -10,6 +10,7 @@
 #import "CollectionGridView.h"
 #import "CollectionCellClassType.h"
 #import "TestCell.h"
+#import "SelectedModel.h"
 
 @interface ViewController () <CollectionGridViewDelegate>
 
@@ -21,17 +22,35 @@
     
     [super viewDidLoad];
     
-    CollectionGridView * gridView = [[CollectionGridView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 400)];
+    NSMutableArray *mulArray = [NSMutableArray array];
+    
+    
+    CollectionGridView * gridView = [[CollectionGridView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 400)];
+    gridView.backgroundColor = [UIColor greenColor];
+    
+    
+    UILabel *label        = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, self.view.bounds.size.width, 40)];
+    label.text            = @"我是标题";
+    label.font            = [UIFont systemFontOfSize:15];
+    label.textAlignment   = NSTextAlignmentLeft;
+    [gridView addSubview:label];
     
     gridView.cellHeight         = 40;
-    gridView.contentEdegeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    gridView.contentEdegeInsets = UIEdgeInsetsMake(60, 10, 10, 10);
     gridView.horizonGap         = 20;
     gridView.verticalGap        = 20;
     gridView.horizonCellCount   = 3;
     gridView.delegate           = self;
     
-    gridView.dataArray = @[ @[@"wo", @"shi", @"ni", @"jie"],
-                           @"ni", @"zhi", @"dao", @"ma", @"?"];
+    
+    NSArray *array = @[ @"oo", @"ni", @"zhi", @"dao", @"ma", @"?"];
+    for (NSString *name in array) {
+        SelectedModel *model = [[SelectedModel alloc] init];
+        model.typeName       = name;
+        [mulArray addObject:model];
+    }
+    
+    gridView.dataArray = mulArray;
     
     CollectionCellClassType * cellType = [[CollectionCellClassType alloc] init];
     cellType.className                 = [TestCell class];

@@ -35,5 +35,8 @@
  */
 - (void)loadContent;
 
-
+/**
+ *  点击事件
+ */
+- (void)selectEvent;
 @end
