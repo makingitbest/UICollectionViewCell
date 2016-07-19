@@ -50,8 +50,8 @@
     // 改变collectionView的frame  ,没什么作用
     self.collectionView.frame = CGRectMake(0, 0, self.bounds.size.width, collectionHeight);
     
-   // 改变view的坐标, 移动collectionView的位置
-    self.frame                = CGRectMake(self.bounds.origin.x, 64, self.bounds.size.width, collectionHeight);
+   // 改变view的坐标, 移动collectionView的位置 搞清楚frame与bounce的区别
+    self.frame                = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, collectionHeight);
     
     self.collectionView.layer.borderWidth = 2;
     self.collectionView.backgroundColor   = [UIColor redColor];
@@ -91,6 +91,12 @@
         
         return [self.delegate collectionGridView:self didSelectedCell:cell];
     }
+}
+
+- (void)reloadData {
+
+    [self.collectionView reloadData];
+
 }
 
 @end

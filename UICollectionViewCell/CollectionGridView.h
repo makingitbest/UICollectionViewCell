@@ -57,8 +57,14 @@
  */
 @property (nonatomic, strong) CollectionCellClassType *registCell;
 
-
+/**
+ *  重新设置collectionView的坐标值,大小
+ */
 - (void)setUp;
 
+/**
+ *  刷新数据,用于实现单个cell的选择状态
+ */
+- (void)reloadData;
 
 @end
